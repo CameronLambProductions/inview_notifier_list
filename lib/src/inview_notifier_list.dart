@@ -87,6 +87,7 @@ class InViewNotifierCustomScrollView extends InViewNotifier {
     Key center,
     double anchor = 0.0,
     int semanticChildCount,
+    double cacheExtent,
   }) : super(
           key: key,
           initialInViewIds: initialInViewIds,
@@ -106,6 +107,7 @@ class InViewNotifierCustomScrollView extends InViewNotifier {
             shrinkWrap: shrinkWrap,
             center: center,
             semanticChildCount: semanticChildCount,
+            cacheExtent: cacheExtent,
           ),
         );
 
