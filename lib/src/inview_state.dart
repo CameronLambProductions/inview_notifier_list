@@ -49,11 +49,9 @@ class InViewState extends ChangeNotifier {
 
   ///The listener that is called when the list view is scrolled.
   void onScroll(ScrollNotification notification) {
-    if (notification is ScrollStartNotification ||
-        notification is ScrollUpdateNotification) {
+    if (notification is ScrollUpdateNotification && notification.scrollDelta > 500) {
       if (_currentInViewIds.isNotEmpty) {
         _currentInViewIds.clear();
-        removeContexts(1);
         notifyListeners();
       }
     } else {
